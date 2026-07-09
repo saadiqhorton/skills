@@ -4,8 +4,16 @@ All notable changes to this collection of skills are documented here. The format
 
 ## [Unreleased]
 
+### Added
+- **`corigin-mapreduce` v1.0.0** — new skill in `agentic-dev/`
+  - Parallel agent work across large codebases using git branches as the communication layer
+  - Coordinator-driven MapReduce loop: shard → worker branches → reduce → iterate
+  - Generalizes Cognition's security swarm pattern for any large-scale agent task (research, coding, review, audit)
+  - Fault tolerance via git checkout/resume, full auditability through branch history
+  - Based on Matt Rickard's reverse-engineered Cognition Agentic MapReduce (Jul 2026)
+  - Source: ["Rebuilding Cognition's Agentic MapReduce"](https://blog.matt-rickard.com/p/rebuilding-cognitions-agentic-mapreduce)
+
 ### Planned
-- **`agentic-dev/` category** — skills for agentic dev workflows (Claude Code dynamic workflows, multi-agent orchestration, autonomous coding)
 - **`devops/` category** — homelab, Docker, Proxmox, network operations
 - **`finance/` category** — budgeting, bank integrations, transaction tracking
 - **`productivity/` category** — note-taking, kanban, daily workflows

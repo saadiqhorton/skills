@@ -6,14 +6,18 @@ Source: Thariq's "A harness for every task" article (Jun 2 2026) + the official 
 
 ## Install
 
-Drop this folder into `~/.claude/skills/`:
+```bash
+# One-liner — no repo clone required
+curl -fsSL https://raw.githubusercontent.com/saadiqhorton/skills/main/install.sh | bash -s -- workflow-selector
+
+# verify (also runs automatically after install)
+python3 ~/.claude/skills/workflow-selector/scripts/validate.py
+```
+
+Or copy manually from a local checkout:
 
 ```bash
-# from the directory containing this skill
 cp -r workflow-selector ~/.claude/skills/
-
-# verify
-python3 ~/.claude/skills/workflow-selector/scripts/validate.py
 ```
 
 ## Use

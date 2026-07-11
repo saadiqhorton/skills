@@ -32,16 +32,35 @@ See [`CATEGORIES.md`](./CATEGORIES.md) for the rationale behind each category an
 
 ## Install
 
+Install a single skill without cloning the whole repo:
+
 ```bash
-# Option 1: clone the whole repo and copy a single skill
+# One-liner (recommended) — installs to ~/.claude/skills/
+curl -fsSL https://raw.githubusercontent.com/saadiqhorton/skills/main/install.sh | bash -s -- workflow-selector
+
+# Or for Cursor skills:
+curl -fsSL https://raw.githubusercontent.com/saadiqhorton/skills/main/install.sh | bash -s -- --target ~/.cursor/skills workflow-selector
+
+# List available skills
+curl -fsSL https://raw.githubusercontent.com/saadiqhorton/skills/main/install.sh | bash -s -- --list
+```
+
+If you've already cloned this repo, you can run `./install.sh` locally:
+
+```bash
+./install.sh workflow-selector
+./install.sh agentic-dev/corigin-mapreduce
+./install.sh --target ~/.cursor/skills corigin-mapreduce
+```
+
+The installer uses a **sparse git checkout** — it only downloads the skill folder you asked for, not the entire repo. Skills with validators (like `workflow-selector`) run them automatically after install.
+
+Legacy options:
+
+```bash
+# Clone the whole repo and copy manually
 git clone https://github.com/saadiqhorton/skills.git
 cp -r skills/agentic-dev/workflow-selector ~/.claude/skills/
-
-# Option 2: grab a single skill as a zip from GitHub's UI
-# Then: unzip workflow-selector.zip -d ~/.claude/skills/workflow-selector
-
-# Verify
-python3 ~/.claude/skills/workflow-selector/scripts/validate.py
 ```
 
 ## Conventions

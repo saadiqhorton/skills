@@ -5,6 +5,10 @@ All notable changes to this collection of skills are documented here. The format
 ## [Unreleased]
 
 ### Added
+- **`install.sh`** — one-command installer for individual skills without cloning the whole repo
+  - Sparse git checkout downloads only the requested skill folder
+  - Supports `--list`, `--target`, `--ref`, and `--dry-run`
+  - Auto-runs `scripts/validate.py` when present
 - **`corigin-mapreduce` v1.0.0** — new skill in `agentic-dev/`
   - Parallel agent work across large codebases using git branches as the communication layer
   - Coordinator-driven MapReduce loop: shard → worker branches → reduce → iterate

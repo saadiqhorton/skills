@@ -7,17 +7,10 @@ Source: Thariq's "A harness for every task" article (Jun 2 2026) + the official 
 ## Install
 
 ```bash
-# One-liner — no repo clone required
-curl -fsSL https://raw.githubusercontent.com/saadiqhorton/skills/main/install.sh | bash -s -- workflow-selector
+npx skills add saadiqhorton/skills@workflow-selector
 
-# verify (also runs automatically after install)
+# optional: verify structure
 python3 ~/.claude/skills/workflow-selector/scripts/validate.py
-```
-
-Or copy manually from a local checkout:
-
-```bash
-cp -r workflow-selector ~/.claude/skills/
 ```
 
 ## Use

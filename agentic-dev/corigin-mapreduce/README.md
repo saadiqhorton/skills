@@ -5,14 +5,7 @@ A Claude Code skill for running parallel agent work across large codebases using
 ## Install
 
 ```bash
-# One-liner — no repo clone required
-curl -fsSL https://raw.githubusercontent.com/saadiqhorton/skills/main/install.sh | bash -s -- corigin-mapreduce
-```
-
-Or copy manually from a local checkout:
-
-```bash
-cp -r corigin-mapreduce ~/.claude/skills/
+npx skills add saadiqhorton/skills@corigin-mapreduce
 ```
 
 ## Use

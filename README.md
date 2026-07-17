@@ -32,36 +32,27 @@ See [`CATEGORIES.md`](./CATEGORIES.md) for the rationale behind each category an
 
 ## Install
 
-Install a single skill without cloning the whole repo:
+Uses the open [skills](https://github.com/vercel-labs/skills) CLI — no repo clone required:
 
 ```bash
-# One-liner (recommended) — installs to ~/.claude/skills/
-curl -fsSL https://raw.githubusercontent.com/saadiqhorton/skills/main/install.sh | bash -s -- workflow-selector
+# Install one skill (project-level)
+npx skills add saadiqhorton/skills@workflow-selector
 
-# Or for Cursor skills:
-curl -fsSL https://raw.githubusercontent.com/saadiqhorton/skills/main/install.sh | bash -s -- --target ~/.cursor/skills workflow-selector
+# Or install globally (available across projects)
+npx skills add saadiqhorton/skills@workflow-selector -g
 
-# List available skills
-curl -fsSL https://raw.githubusercontent.com/saadiqhorton/skills/main/install.sh | bash -s -- --list
+# Target a specific agent
+npx skills add saadiqhorton/skills@corigin-mapreduce -a claude-code
+npx skills add saadiqhorton/skills@workflow-selector -a cursor
+
+# List skills in this repo
+npx skills add saadiqhorton/skills -l
+
+# Install everything
+npx skills add saadiqhorton/skills --all
 ```
 
-If you've already cloned this repo, you can run `./install.sh` locally:
-
-```bash
-./install.sh workflow-selector
-./install.sh agentic-dev/corigin-mapreduce
-./install.sh --target ~/.cursor/skills corigin-mapreduce
-```
-
-The installer uses a **sparse git checkout** — it only downloads the skill folder you asked for, not the entire repo. Skills with validators (like `workflow-selector`) run them automatically after install.
-
-Legacy options:
-
-```bash
-# Clone the whole repo and copy manually
-git clone https://github.com/saadiqhorton/skills.git
-cp -r skills/agentic-dev/workflow-selector ~/.claude/skills/
-```
+Requires Node.js (for `npx`). See the [skills CLI docs](https://github.com/vercel-labs/skills) for more options (`--copy`, `--yes`, multi-agent install, etc.).
 
 ## Conventions
 

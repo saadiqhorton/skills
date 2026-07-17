@@ -35,10 +35,10 @@ See [`CATEGORIES.md`](./CATEGORIES.md) for the rationale behind each category an
 Uses the open [skills](https://github.com/vercel-labs/skills) CLI — no repo clone required:
 
 ```bash
-# Install one skill (project-level)
+# Project-local (default) — installs under ./<agent>/skills/ in the current repo
 npx skills add saadiqhorton/skills@workflow-selector
 
-# Or install globally (available across projects)
+# Global — available across all projects (omit for project-local)
 npx skills add saadiqhorton/skills@workflow-selector -g
 
 # Target a specific agent
@@ -51,6 +51,15 @@ npx skills add saadiqhorton/skills -l
 # Install everything
 npx skills add saadiqhorton/skills --all
 ```
+
+### Install scope
+
+| Scope | Flag | Location | Use case |
+|---|---|---|---|
+| **Project** | *(default — no flag)* | `./<agent>/skills/` | Commit with the repo, share with the team |
+| **Global** | `-g` / `--global` | `~/<agent>/skills/` | Available across all projects |
+
+There is no separate `--project` flag on `add` — project-local is the default when you omit `-g`.
 
 Requires Node.js (for `npx`). See the [skills CLI docs](https://github.com/vercel-labs/skills) for more options (`--copy`, `--yes`, multi-agent install, etc.).
 

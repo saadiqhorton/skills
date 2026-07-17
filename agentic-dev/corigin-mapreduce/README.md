@@ -5,7 +5,11 @@ A Claude Code skill for running parallel agent work across large codebases using
 ## Install
 
 ```bash
+# Project-local (default) → ./<agent>/skills/
 npx skills add saadiqhorton/skills@corigin-mapreduce
+
+# Global → ~/<agent>/skills/
+npx skills add saadiqhorton/skills@corigin-mapreduce -g
 ```
 
 ## Use

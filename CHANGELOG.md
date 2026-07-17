@@ -7,7 +7,8 @@ All notable changes to this collection of skills are documented here. The format
 ### Changed
 - **Install method** — switched from custom `install.sh` to the open [`skills`](https://github.com/vercel-labs/skills) CLI
   - `npx skills add saadiqhorton/skills@<skill>` installs a single skill without cloning the repo
-  - Supports global (`-g`), agent targeting (`-a`), listing (`-l`), and `--all`
+  - Documents install scope: project-local is the default (no flag); use `-g` / `--global` for user-level installs
+  - Supports agent targeting (`-a`), listing (`-l`), and `--all`
 
 ### Removed
 - **`install.sh`** — replaced by `npx skills`

@@ -7,10 +7,14 @@ Source: Thariq's "A harness for every task" article (Jun 2 2026) + the official 
 ## Install
 
 ```bash
+# Project-local (default) → ./<agent>/skills/
 npx skills add saadiqhorton/skills@workflow-selector
 
-# optional: verify structure
-python3 ~/.claude/skills/workflow-selector/scripts/validate.py
+# Global → ~/<agent>/skills/
+npx skills add saadiqhorton/skills@workflow-selector -g
+
+# optional: verify structure (adjust path for agent + scope)
+python3 .claude/skills/workflow-selector/scripts/validate.py
 ```
 
 ## Use

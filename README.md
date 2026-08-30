@@ -28,7 +28,6 @@ See [`CATEGORIES.md`](./CATEGORIES.md) for the rationale behind each category an
 | Skill | Version | Source | Purpose |
 |---|---|---|---|
 | [`workflow-selector/`](./agentic-dev/workflow-selector) | v0.2.0 | Thariq (Anthropic), Jun 2 2026 — *"A harness for every task: dynamic workflows in Claude Code"* | Classifies a freeform task into the right **Claude Code dynamic workflow** pattern (7 base + 3 compositions) and returns a copy-paste `ultracode:` prompt with the right `/goal` and `/loop` modifiers. Includes 10 ready-to-use ESM templates. |
-| [`corigin-mapreduce/`](./agentic-dev/corigin-mapreduce) | v1.0.0 | Matt Rickard, Jul 5 2026 — *"Rebuilding Cognition's Agentic MapReduce"* | Runs parallel agent work across large codebases using **git branches as the communication layer**: worker proposal branches reduced into candidate branches across multiple iterations. Generalizes Cognition's security swarm pattern for any large-scale agent task. |
 
 ## Install
 
@@ -42,7 +41,6 @@ npx skills add saadiqhorton/skills@workflow-selector
 npx skills add saadiqhorton/skills@workflow-selector -g
 
 # Target a specific agent
-npx skills add saadiqhorton/skills@corigin-mapreduce -a claude-code
 npx skills add saadiqhorton/skills@workflow-selector -a cursor
 
 # List skills in this repo

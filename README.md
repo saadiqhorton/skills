@@ -7,6 +7,7 @@ A categorized collection of agentic dev, DevOps, and personal productivity skill
 ```
 skills/
 ├── agentic-dev/          # AI agents, dynamic workflows, multi-agent systems
+├── software-development/ # writing & reviewing production-grade code
 ├── devops/               # (planned) homelab, Docker, Proxmox, network ops
 ├── finance/              # (planned) personal finance, banking, transactions
 ├── productivity/         # (planned) notes, kanban, daily workflows
@@ -29,6 +30,12 @@ See [`CATEGORIES.md`](./CATEGORIES.md) for the rationale behind each category an
 |---|---|---|---|
 | [`workflow-selector/`](./agentic-dev/workflow-selector) | v0.2.0 | Thariq (Anthropic), Jun 2 2026 — *"A harness for every task: dynamic workflows in Claude Code"* | Classifies a freeform task into the right **Claude Code dynamic workflow** pattern (7 base + 3 compositions) and returns a copy-paste `ultracode:` prompt with the right `/goal` and `/loop` modifiers. Includes 10 ready-to-use ESM templates. |
 
+### `software-development/`
+
+| Skill | Version | Source | Purpose |
+|---|---|---|---|
+| [`production-python-code/`](./software-development/production-python-code) | v1.0.0 | Self-authored; verified against authoritative sources (Real Python, OWASP, Python docs) on 2026-02-03 | Writes, reviews, and refactors production-grade Python across eight design principles (cohesion/SRP, encapsulation, loose coupling, extensibility, portability, defensibility, testability, simplicity) with runnable bad→good examples for each. |
+
 ## Install
 
 Uses the open [skills](https://github.com/vercel-labs/skills) CLI — no repo clone required:
@@ -36,6 +43,7 @@ Uses the open [skills](https://github.com/vercel-labs/skills) CLI — no repo cl
 ```bash
 # Project-local (default) — installs under ./<agent>/skills/ in the current repo
 npx skills add saadiqhorton/skills@workflow-selector
+npx skills add saadiqhorton/skills@production-python-code
 
 # Global — available across all projects (omit for project-local)
 npx skills add saadiqhorton/skills@workflow-selector -g

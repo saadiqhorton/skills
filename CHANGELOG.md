@@ -13,6 +13,12 @@ All notable changes to this collection of skills are documented here. The format
 ### Removed
 - **`install.sh`** — replaced by `npx skills`
 
+### Added
+- **`production-python-code` v1.0.0** — new skill in `software-development/`
+  - Writes, reviews, and refactors production-grade Python across eight design principles
+  - Runnable bad → good examples for every principle
+  - Verified against authoritative sources (Real Python, OWASP, Python docs) on 2026-02-03
+
 ### Planned
 - **`devops/` category** — homelab, Docker, Proxmox, network operations
 - **`finance/` category** — budgeting, bank integrations, transaction tracking

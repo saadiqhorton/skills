@@ -4,11 +4,16 @@ All notable changes to this collection of skills are documented here. The format
 
 ## [Unreleased]
 
+### Changed
+- **Install method** — switched from custom `install.sh` to the open [`skills`](https://github.com/vercel-labs/skills) CLI
+  - `npx skills add saadiqhorton/skills@<skill>` installs a single skill without cloning the repo
+  - Documents install scope: project-local is the default (no flag); use `-g` / `--global` for user-level installs
+  - Supports agent targeting (`-a`), listing (`-l`), and `--all`
+
+### Removed
+- **`install.sh`** — replaced by `npx skills`
+
 ### Added
-- **`install.sh`** — one-command installer for individual skills without cloning the whole repo
-  - Sparse git checkout downloads only the requested skill folder
-  - Supports `--list`, `--target`, `--ref`, and `--dry-run`
-  - Auto-runs `scripts/validate.py` when present
 - **`corigin-mapreduce` v1.0.0** — new skill in `agentic-dev/`
   - Parallel agent work across large codebases using git branches as the communication layer
   - Coordinator-driven MapReduce loop: shard → worker branches → reduce → iterate

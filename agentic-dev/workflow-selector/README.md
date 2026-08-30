@@ -7,17 +7,14 @@ Source: Thariq's "A harness for every task" article (Jun 2 2026) + the official 
 ## Install
 
 ```bash
-# One-liner — no repo clone required
-curl -fsSL https://raw.githubusercontent.com/saadiqhorton/skills/main/install.sh | bash -s -- workflow-selector
+# Project-local (default) → ./<agent>/skills/
+npx skills add saadiqhorton/skills@workflow-selector
 
-# verify (also runs automatically after install)
-python3 ~/.claude/skills/workflow-selector/scripts/validate.py
-```
+# Global → ~/<agent>/skills/
+npx skills add saadiqhorton/skills@workflow-selector -g
 
-Or copy manually from a local checkout:
-
-```bash
-cp -r workflow-selector ~/.claude/skills/
+# optional: verify structure (adjust path for agent + scope)
+python3 .claude/skills/workflow-selector/scripts/validate.py
 ```
 
 ## Use

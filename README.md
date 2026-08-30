@@ -6,7 +6,7 @@ A categorized collection of agentic dev, DevOps, and personal productivity skill
 
 ```
 skills/
-├── agentic-dev/          # AI agents, dynamic workflows, multi-agent systems
+├── agentic-dev/          # AI agents, dynamic workflows, multi-agent systems, clone-a-SaaS playbook
 ├── software-development/ # writing & reviewing production-grade code
 ├── devops/               # (planned) homelab, Docker, Proxmox, network ops
 ├── finance/              # (planned) personal finance, banking, transactions
@@ -29,6 +29,7 @@ See [`CATEGORIES.md`](./CATEGORIES.md) for the rationale behind each category an
 | Skill | Version | Source | Purpose |
 |---|---|---|---|
 | [`workflow-selector/`](./agentic-dev/workflow-selector) | v0.2.0 | Thariq (Anthropic), Jun 2 2026 — *"A harness for every task: dynamic workflows in Claude Code"* | Classifies a freeform task into the right **Claude Code dynamic workflow** pattern (7 base + 3 compositions) and returns a copy-paste `ultracode:` prompt with the right `/goal` and `/loop` modifiers. Includes 10 ready-to-use ESM templates. |
+| [`clone-multi-million-dollar-app/`](./agentic-dev/clone-multi-million-dollar-app) | v1.0.0 | Self-authored; grounded in Nate Herk's video *"I Cloned Calendly and Now It's Free Forever"* (2026-08-28) | Rebuilds a $1M+ paid SaaS into a free, self-hostable, open-source (MIT) app with an AI coding agent. Agent-agnostic. Encodes the four-phase `/goal` seed prompt, the ~50-agent testing swarm loop, research-first scoping, the own-the-software-layer rule (UX/rebrand/performance), and the honest ~$15k-for-$200/mo economics. |
 
 ### `software-development/`
 
@@ -44,6 +45,7 @@ Uses the open [skills](https://github.com/vercel-labs/skills) CLI — no repo cl
 # Project-local (default) — installs under ./<agent>/skills/ in the current repo
 npx skills add saadiqhorton/skills@workflow-selector
 npx skills add saadiqhorton/skills@production-python-code
+npx skills add saadiqhorton/skills@clone-multi-million-dollar-app
 
 # Global — available across all projects (omit for project-local)
 npx skills add saadiqhorton/skills@workflow-selector -g

@@ -14,6 +14,10 @@ All notable changes to this collection of skills are documented here. The format
 - **`install.sh`** — replaced by `npx skills`
 
 ### Added
+- **`clone-multi-million-dollar-app` v1.0.0** — new skill in `agentic-dev/`
+  - Rebuilds a $1M+ paid SaaS into a free, self-hostable, open-source (MIT) app with an AI coding agent
+  - Agent-agnostic: works with Codex, Claude Code, Cursor, OpenCode, Gemini
+  - Encodes the Nate Herk "clone Calendly → SnagTime" playbook, grounded in the full video (four-phase `/goal` seed prompt, ~50-agent testing swarm, research-first, own-the-software-layer, honest economics)
 - **`production-python-code` v1.0.0** — new skill in `software-development/`
   - Writes, reviews, and refactors production-grade Python across eight design principles
   - Runnable bad → good examples for every principle

@@ -4,7 +4,7 @@ Skills are grouped into category folders by domain. The current categories refle
 
 | Category | Domain | Examples |
 |---|---|---|
-| `agentic-dev/` | Building and orchestrating AI agents (Claude Code, dynamic workflows, multi-agent systems) | `workflow-selector/` |
+| `agentic-dev/` | Building and orchestrating AI agents (Claude Code, dynamic workflows, multi-agent systems) | `workflow-selector/`, `clone-multi-million-dollar-app/` |
 | `software-development/` | Writing and reviewing production-grade code (Python, design principles, refactoring) | `production-python-code/` |
 | `devops/` | Homelab, infrastructure, deployment, monitoring | (planned) |
 | `finance/` | Personal finance, banking integrations, transaction tracking | (planned) |
